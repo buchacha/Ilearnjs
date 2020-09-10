@@ -1,5 +1,6 @@
 $(document).ready(() => {
     console.log( "ready!" );
     result = prompt('Имя: ', ['hello']);
-    alert("Hello " + result);
+    let isBoss = confirm("Ты здесь главный?");
+    alert("Hello " + result + "Boss: " + isBoss);
 });

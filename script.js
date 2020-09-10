@@ -1,40 +1,23 @@
-// $(document).ready(() => {
+// function sayHi() {
+//     alert( "Привет" );
+// }
 
-//     browser=prompt("Какой у вас браузер?")
-
-//     if(browser == 'Edge') {
-//         alert("You've got the Edge!");
-//     } else if (browser == 'Chrome'
-//     || browser == 'Firefox'
-//     || browser == 'Safari'
-//     || browser == 'Opera') {
-//         alert( 'Okay we support these browsers too' );
-//     } else {
-//         alert( 'We hope that this page looks ok!' );
-//     }
-
-// });
-
-function showPrimes(n=5) {
-
-  for (let i = 2; i < n; i++) {
-    if (!isPrime(i)) continue;
-
-    alert(i);  // простое
-  }
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
 }
 
-function isPrime(n) {
-  for (let i = 2; i < n; i++) {
-    if ( n % i == 0) return false;
-  }
-  return true;
+function showOk() {
+  alert( "Вы согласны." );
+}
+
+function showCancel() {
+  alert( "Вы отменили выполнение." );
 }
 
 $(document).ready(() => {
 
-    n=prompt("Введите число n:", '');
-    showPrimes(9);
+    ask("Вы согласны?", showOk, showCancel);
 
 });
 

@@ -1,21 +1,18 @@
-// $(document).ready(() => {
-//     let year = prompt('В каком году появилась спецификация ECMAScript-2015?', '');
-
-//     if (year < 2015) {
-//         alert( 'Это слишком рано...' );
-//     } else if (year > 2015) {
-//         alert( 'Это поздновато' );
-//     } else {
-//         alert( 'Верно!' );
-//     }
-// });
-
 $(document).ready(() => {
-    let year = prompt('В каком году появилась спецификация ECMAScript-2015?', '');
-
-    let text = (year < 2015) ? 'Это слишком рано...' 
-    : (year > 2015) ? 'Это поздновато' 
-    : 'Верно!';
-
-    alert(text)
+    let name = prompt('Кто там?', '');
+    if (name == 'Админ') {
+        let pwd = prompt('Пароль?', '');
+        if (pwd == 'Я Главный')
+            alert('Здравствуйте!');
+        else if (pwd == null)
+            alert('Отменено');
+        else
+            alert('Неверный пароль');
+    }
+    else if (name == null)
+            alert('Отменено');
+    else
+        alert('Я вас не знаю');
 });
+
+

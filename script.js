@@ -1,14 +1,22 @@
-let obj = {};
+function Calculator() {
 
-function A() { 
-    return obj;
+    this.read = () => {
+        this.a = +prompt('a?', '');
+        this.b = +prompt('b?', '')
+    }
+
+    this.sum = () => {
+        return this.a + this.b
+    }
+
+    this.mul = () => {
+        return this.a * this.b
+    }
 }
 
-function B() { 
-    return obj;
-}
 
-let a = new A;
-let b = new B;
+let calculator = new Calculator();
+calculator.read();
 
-alert( a == b ); // true
+alert( "Sum=" + calculator.sum() );
+alert( "Mul=" + calculator.mul() );

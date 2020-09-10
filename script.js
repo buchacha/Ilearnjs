@@ -1,8 +1,16 @@
-let user = {
-  name: "John",
-  age: 30
-};
+myObj = {
+    name: "Ivan",
+    age: 17,
+    salary: 13
+}
 
-let clone = Object.assign({}, user);
+function multiplyNumeric(obj) {
+  for (let key in obj) {
+    if (typeof obj[key] == 'number') {
+      obj[key] *= 2;
+    }
+  }
+}
 
-alert(clone==user)
+multiplyNumeric(myObj)
+console.log(myObj)

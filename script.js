@@ -1,23 +1,7 @@
-// name = "Ivan"
+let user = { name: 'John' };
 
-// let user = {
-//   name,  // тоже самое, что и name:name
-//   age: 30
-// };
+let admin = user;
 
-// console.log(user)
+admin.name = 'Pete'; // изменено по ссылке из переменной "admin"
 
-let user = {
-  name: "John",
-  age: 30,
-  isAdmin: true
-};
-
-alert( user.noSuchProperty == undefined );
-
-for (let key in user) {
-  // ключи
-  alert( key );  // name, age, isAdmin
-  // значения ключей
-  alert( user[key] ); // John, 30, true
-}
+alert(user.name); // 'Pete', изменения видны по ссылке из переменной "user"

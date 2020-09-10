@@ -1,14 +1,15 @@
-$(document).ready(() => {
+function pow(x, n) {
+  if (n < 0) return NaN;
+  if (Math.round(n) != n) return NaN;
 
-    let age = prompt("Сколько Вам лет?", 18);
+  let result = 1;
 
-    let welcome = (age < 18) ?
-    () => alert('Привет') :
-    () => alert("Здравствуйте!");
+  for (let i = 0; i < n; i++) {
+    result *= x;
+  }
 
-    welcome(); // теперь всё в порядке
-
-});
+  return result;
+}
 
 
 

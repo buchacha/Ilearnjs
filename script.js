@@ -1,16 +1,12 @@
-myObj = {
-    name: "Ivan",
-    age: 17,
-    salary: 13
-}
+let user = {
+  name: "Джон",
+  age: 30,
 
-function multiplyNumeric(obj) {
-  for (let key in obj) {
-    if (typeof obj[key] == 'number') {
-      obj[key] *= 2;
-    }
+  sayHi() {
+    // this - это "текущий объект"
+    alert(this.name);
   }
-}
 
-multiplyNumeric(myObj)
-console.log(myObj)
+};
+
+user.sayHi(); // Джон

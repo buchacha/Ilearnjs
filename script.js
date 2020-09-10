@@ -1,18 +1,28 @@
+// $(document).ready(() => {
+//     let sum = 0;
+
+//     while (true) {
+
+//         let value = +prompt("Введите число", '');
+
+//         if (!value) break; // (*)
+
+//         sum += value;
+
+//     }
+//     alert( 'Сумма: ' + sum );
+// });
+
 $(document).ready(() => {
-    let name = prompt('Кто там?', '');
-    if (name == 'Админ') {
-        let pwd = prompt('Пароль?', '');
-        if (pwd == 'Я Главный')
-            alert('Здравствуйте!');
-        else if (pwd == null)
-            alert('Отменено');
-        else
-            alert('Неверный пароль');
+    for (let i = 0; i < 10; i++) {
+
+        // если true, пропустить оставшуюся часть тела цикла
+        if (i % 2 == 0) continue;
+
+        alert(i); // 1, затем 3, 5, 7, 9
     }
-    else if (name == null)
-            alert('Отменено');
-    else
-        alert('Я вас не знаю');
+
 });
+
 
 

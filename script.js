@@ -1,7 +1,8 @@
-let user = { name: 'John' };
+let user = {
+  name: "John",
+  age: 30
+};
 
-let admin = user;
+let clone = Object.assign({}, user);
 
-admin.name = 'Pete'; // изменено по ссылке из переменной "admin"
-
-alert(user.name); // 'Pete', изменения видны по ссылке из переменной "user"
+alert(clone==user)

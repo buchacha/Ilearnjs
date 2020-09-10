@@ -1,18 +1,17 @@
-let calculator = {
-  sum() {
-    return this.a + this.b;
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+    return this;
   },
-
-  mul() {
-    return this.a * this.b;
+  down() {
+    this.step--;
+    return this;
   },
-
-  read() {
-    this.a = +prompt('a?', 0);
-    this.b = +prompt('b?', 0);
+  showStep: function() { // показывает текущую ступеньку
+    alert( this.step );
+    return this;
   }
 };
 
-calculator.read();
-alert( calculator.sum() );
-alert( calculator.mul() );
+ladder.up().up().down().showStep();

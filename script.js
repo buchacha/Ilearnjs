@@ -1,14 +1,14 @@
-function User(name) {
-  if (!new.target) {
-    return new User(name); 
-  }
-  this.name = name;
+let obj = {};
 
-  this.sayHi = function() {
-    alert( "Меня зовут: " + this.name );
-  };
+function A() { 
+    return obj;
 }
 
-let vasya = new User("Вася");
+function B() { 
+    return obj;
+}
 
-vasya.sayHi(); // Меня зовут: Вася
+let a = new A;
+let b = new B;
+
+alert( a == b ); // true

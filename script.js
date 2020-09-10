@@ -1,39 +1,23 @@
-function pow(x, n) {
-  if (n < 0) return NaN;
-  if (Math.round(n) != n) return NaN;
+// name = "Ivan"
 
-  let result = 1;
+// let user = {
+//   name,  // тоже самое, что и name:name
+//   age: 30
+// };
 
-  for (let i = 0; i < n; i++) {
-    result *= x;
-  }
-
-  return result;
-}
+// console.log(user)
 
 let user = {
   name: "John",
   age: 30,
-  'like coffee': true
+  isAdmin: true
 };
 
-let key = "name";
-alert( user.name ); 
-alert( user["name"] ); 
-// user["like coffee"] = true
-alert(user["like coffee"])
-alert(user["like tea"])
-console.log(user)
+alert( user.noSuchProperty == undefined );
 
-
-car = prompt('Ваша любимая машина: ', 'Mercedes')
-
-user["car"] = car
-
-alert(user.car)
-
-
-
-
-
-
+for (let key in user) {
+  // ключи
+  alert( key );  // name, age, isAdmin
+  // значения ключей
+  alert( user[key] ); // John, 30, true
+}

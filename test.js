@@ -16,7 +16,7 @@ describe("pow", function() {
   });
 
 
-  it("для отрицательных n возвращает NaN", function() {
+  it.only("для отрицательных n возвращает NaN", function() {
     assert.isNaN(pow(2, -1));
   });
 

@@ -1,12 +1,11 @@
 let user = {
   name: "Джон",
-  age: 30,
-
-  sayHi() {
-    // this - это "текущий объект"
-    alert(this.name);
-  }
-
+  hi() { alert(this.name); },
+  bye() { alert("Пока"); }
 };
 
-user.sayHi(); // Джон
+user.hi(); // Джон (простой вызов метода работает хорошо)
+
+// теперь давайте попробуем вызывать user.hi или user.bye
+// в зависимости от имени пользователя user.name
+(user.name == "Джон" ? user.hi() : user.bye()); // Ошибка!

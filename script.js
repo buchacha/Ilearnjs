@@ -1,7 +1,4 @@
-let str = "Ослик Иа-Иа посмотрел на виадук";
-let target = "Иа";
+let str = "stringify";
 
-let pos = -1;
-while ((pos = str.indexOf(target, pos + 1)) != -1) {
-  alert( pos );
-}
+// начинаем с позиции 4 справа, а заканчиваем на позиции 1 справа
+alert( str.slice(-4, -1) ); // gif

@@ -1,15 +1,11 @@
-function Accumulator(value) {
-    this.value = value
+// 'use strict'
 
-    this.read = function() {
-        this.value += +prompt('Введите значение', 0)
-    }
+// let str = "Привет";
 
-}
+// str.test = 5; // (*)
 
-let accumulator = new Accumulator(1); // начальное значение 1
+// alert(str.test); // ошибка
 
-accumulator.read(); // прибавит ввод prompt к текущему значению
-accumulator.read(); // прибавит ввод prompt к текущему значению
+let num = 1.23456;
 
-alert(accumulator.value); // выведет сумму этих значений
+alert( Math.floor(num * 100) / 100 ); // 1.23456 -> 123.456 -> 123 -> 1.23

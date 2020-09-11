@@ -1,11 +1,11 @@
-// 'use strict'
+function readNumber() {
+    let digit;
 
-// let str = "Привет";
+    do {
+        digit = +prompt("Введите число", '');
+    } while (!digit)
 
-// str.test = 5; // (*)
+    return +digit;
+}
 
-// alert(str.test); // ошибка
-
-let num = 1.23456;
-
-alert( Math.floor(num * 100) / 100 ); // 1.23456 -> 123.456 -> 123 -> 1.23
+alert(readNumber())
